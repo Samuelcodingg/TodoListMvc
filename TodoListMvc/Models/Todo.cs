@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Todo_List_MVC.Models
+namespace TodoListMvc.Models
 {
     public class Todo
     {
