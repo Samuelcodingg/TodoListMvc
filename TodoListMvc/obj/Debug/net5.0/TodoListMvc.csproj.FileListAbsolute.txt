@@ -385,3 +385,5 @@ D:\Samuel\Desarrollo Web\C#\TodoListMvc\TodoListMvc\obj\Debug\net5.0\ref\TodoLis
 D:\Samuel\Desarrollo Web\C#\TodoListMvc\TodoListMvc\obj\Debug\net5.0\TodoListMvc.pdb
 D:\Samuel\Desarrollo Web\C#\TodoListMvc\TodoListMvc\obj\Debug\net5.0\TodoListMvc.genruntimeconfig.cache
 D:\Samuel\Desarrollo Web\C#\TodoListMvc\TodoListMvc\obj\Debug\net5.0\Razor\Views\Home\Create.cshtml.g.cs
+D:\Samuel\Desarrollo Web\C#\TodoListMvc\TodoListMvc\obj\Debug\net5.0\Razor\Views\Home\Edit.cshtml.g.cs
+D:\Samuel\Desarrollo Web\C#\TodoListMvc\TodoListMvc\obj\Debug\net5.0\Razor\Views\Home\Delete.cshtml.g.cs

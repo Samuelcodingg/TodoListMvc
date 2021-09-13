@@ -16,8 +16,8 @@
                     <div class="bg-light p-2 mt-2 d-md-flex justify-content-between">
                         <h5>@item.Description</h5>
                         <div class="row">
-                            <button class="btn btn-secondary col-6"><i class="far fa-edit"></i></button>
-                            <button class="btn btn-danger col-6"><i class="far fa-trash-alt"></i></button>
+                            <a asp-controller="Home" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-secondary col-6"><i class="far fa-edit"></i></a>
+                            <a asp-controller="Home" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger col-6"><i class="far fa-trash-alt"></i></a>
                         </div>
                     </div>
                 </div>

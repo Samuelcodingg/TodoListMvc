@@ -52,5 +52,71 @@ namespace Todo_List_MVC.Controllers
 
             return View();
         }
+
+        public IActionResult Edit(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+
+            var todo = _context.Todo.Find(id);
+
+            if (todo == null)
+            {
+                return NotFound();
+            }
+
+            return View(todo);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(Todo todo)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Todo.Update(todo);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View();
+        }
+
+        public IActionResult Delete(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+
+            var todo = _context.Todo.Find(id);
+
+            if (todo == null)
+            {
+                return NotFound();
+            }
+
+            return View(todo);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteTodo(int? id)
+        {
+
+            var todo = _context.Todo.Find(id);
+
+            if (todo == null)
+            {
+                return NotFound();
+            }
+
+            _context.Todo.Remove(todo);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
     }
 }

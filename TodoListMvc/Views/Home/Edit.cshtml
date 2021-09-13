@@ -7,11 +7,12 @@
 
 <div class="p-3 mx-auto">
     <h2>Todo List</h2>
-    <form method="post" asp-action="Create">
+    <form method="post" asp-action="Edit">
+        <input type="hidden" asp-for="Id" />
         <div asp-validation-summary="ModelOnly" class="text-danger"></div> <!--Validation w/ model-->
         <textarea asp-for="Description" class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
         <span asp-validation-for="Description" class="text-danger"></span>
-        <input type="submit" value="Create todo" class="btn btn-success mt-3 w-100" />
+        <input type="submit" value="Save changes" class="btn btn-success mt-3 w-100" />
     </form>
 </div>
 
