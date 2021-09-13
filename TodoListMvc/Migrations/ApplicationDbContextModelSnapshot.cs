@@ -27,8 +27,8 @@ namespace TodoListMvc.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                        .HasMaxLength(80)
+                        .HasColumnType("nvarchar(80)");
 
                     b.HasKey("Id");
 

@@ -9,7 +9,7 @@ using TodoListMvc.Data;
 namespace TodoListMvc.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210913001829_MyTodoMigration")]
+    [Migration("20210913021625_MyTodoMigration")]
     partial class MyTodoMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -29,8 +29,8 @@ namespace TodoListMvc.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                        .HasMaxLength(80)
+                        .HasColumnType("nvarchar(80)");
 
                     b.HasKey("Id");
 

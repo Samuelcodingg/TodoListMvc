@@ -12,7 +12,7 @@ namespace TodoListMvc.Models
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Write a todo please.")]
-        [StringLength(20, ErrorMessage = "The lenght must be between {2} and {1}", MinimumLength = 5)]
+        [StringLength(80, ErrorMessage = "The lenght must be between {2} and {1}", MinimumLength = 5)]
         public string Description { get; set; }
     }
 }
