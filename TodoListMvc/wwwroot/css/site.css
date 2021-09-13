@@ -2,3 +2,7 @@
     background-image: linear-gradient(#409dc4, #5ab2da );
     min-height: 100vh;
 }
+
+textarea {
+    resize: none;
+}

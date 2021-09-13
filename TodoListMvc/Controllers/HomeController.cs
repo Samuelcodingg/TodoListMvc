@@ -32,5 +32,25 @@ namespace Todo_List_MVC.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Todo todo)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Todo.Add(todo);
+                _context.SaveChanges();
+
+                return RedirectToAction("Index");
+            }
+
+            return View();
+        }
     }
 }

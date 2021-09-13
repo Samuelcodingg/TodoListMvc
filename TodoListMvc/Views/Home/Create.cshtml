@@ -1,0 +1,22 @@
+﻿@model TodoListMvc.Models.Todo
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Create";
+}
+
+
+<div class="p-3 mx-auto">
+    <h2>Todo List</h2>
+    <form method="post" asp-action="Create">
+        <textarea asp-for="Description" class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+        <input type="submit" value="Create todo" class="btn btn-success mt-3 w-100" />
+    </form>
+</div>
+
+@section Scripts{
+    @*Validation w/ jQuery*@
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
